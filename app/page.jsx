@@ -12,7 +12,7 @@ const Home = () => {
           <Weather />
         </div>
         <div className="col-span-2 row-span-2 col-start-2 row-start-1">
-          <LatestBlogs className="h-full" />
+          <LatestBlogs />
         </div>
       </div>
   );
