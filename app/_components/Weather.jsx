@@ -34,7 +34,7 @@ const Weather = () => {
 
   return (
     <Card className="h-full">
-      <CardHeader className="flex flex-row justify-between items-center py-3">
+      <CardHeader className="flex flex-row justify-between items-center py-2">
         <div>
           <CardTitle className="font-semibold text-2xl tracking-wide flex justify-between">
             <p>Thursday</p>
@@ -47,7 +47,7 @@ const Weather = () => {
       </CardHeader>
       <Separator />
       <CardContent className="text-center text-4xl font-bold tracking-wide py-3">
-        <div>{loading ? <Loader2 className="animate-spin" /> : <p>{temp}</p>}</div>
+        <div>{loading ? <Loader2 className="animate-spin m-auto" size={50} /> : <p>{temp}</p>}</div>
       </CardContent>
       <Separator />
       <CardFooter className="py-3 align-center">

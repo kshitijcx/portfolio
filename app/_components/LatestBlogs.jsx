@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import LatestBlogsSingleItems from "./LatestBlogsSingleItems";
 
 const LatestBlogs = () => {
   return (
@@ -17,13 +18,7 @@ const LatestBlogs = () => {
       </CardHeader>
       <Separator />
       <CardContent className="p-8">
-        <ul className="space-y-4">
-          <li>Link 1</li>
-          <li>Link 2</li>
-          <li>Link 3</li>
-          <li>Link 4</li>
-          <li>Link 5</li>
-        </ul>
+        <LatestBlogsSingleItems/>
       </CardContent>
       <CardFooter>
         <p>Read More...</p>
