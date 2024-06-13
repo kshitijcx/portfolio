@@ -21,7 +21,7 @@ const Hero = () => {
         <CardTitle className="text-3xl font-semibold tracking-wide leading-normal">
           Kshitij Chauhan
         </CardTitle>
-        <CardDescription>Creative, passionate and goal oriented software engineer.</CardDescription>
+        <CardDescription>Creative, passionate and goal oriented Full-Stack Software Engineer.</CardDescription>
       </CardHeader>
       <Separator/>
       <CardContent className="flex gap-2 mt-6 justify-end">

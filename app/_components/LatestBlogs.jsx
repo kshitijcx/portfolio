@@ -8,8 +8,19 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import LatestBlogsSingleItems from "./LatestBlogsSingleItems";
+import { client } from "@/lib/sanity/client";
 
-const LatestBlogs = () => {
+const fetchTop3 = async () => {
+  const CONTENT_QUERY = `*[_type == "post"] {}`;
+  const content = await client.fetch(CONTENT_QUERY);
+  return content;
+};
+
+const LatestBlogs = async () => {
+
+  const data = await fetchTop3();
+  console.log(data);
+
   return (
     <Card className="h-full">
       <CardHeader>
@@ -17,10 +28,10 @@ const LatestBlogs = () => {
         <CardDescription>Card Description</CardDescription>
       </CardHeader>
       <Separator />
-      <CardContent className="p-8 flex flex-col gap-2">
-        <LatestBlogsSingleItems/>
-        <LatestBlogsSingleItems/>
-        <LatestBlogsSingleItems/>
+      <CardContent className="px-12 py-4 flex flex-col gap-2">
+        <LatestBlogsSingleItems />
+        <LatestBlogsSingleItems />
+        <LatestBlogsSingleItems />
       </CardContent>
       <CardFooter>
         <p>Read More...</p>
