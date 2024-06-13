@@ -17,7 +17,9 @@ const LatestBlogs = () => {
         <CardDescription>Card Description</CardDescription>
       </CardHeader>
       <Separator />
-      <CardContent className="p-8">
+      <CardContent className="p-8 flex flex-col gap-2">
+        <LatestBlogsSingleItems/>
+        <LatestBlogsSingleItems/>
         <LatestBlogsSingleItems/>
       </CardContent>
       <CardFooter>

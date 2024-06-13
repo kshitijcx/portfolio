@@ -16,6 +16,8 @@ const Weather = () => {
   const [temp, setTemp] = useState("");
   const [weather, setWeather] = useState("");
   const [loading, setLoading] = useState(false);
+  const [pres,setPres] = useState("");
+  const [hum,setHum] = useState("");
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -26,6 +28,8 @@ const Weather = () => {
       const data = await response.json();
       console.log(data);
       setTemp(Math.round(data.main.temp) + "°");
+      setPres(data.main.pressure);
+      setHum(data.main.humidity);
       setWeather(data.weather[0]);
       setLoading(false);
     };
@@ -34,7 +38,7 @@ const Weather = () => {
 
   return (
     <Card className="h-full">
-      <CardHeader className="flex flex-row justify-between items-center py-2">
+      <CardHeader className="flex flex-row justify-between items-center py-2 h-24">
         <div>
           <CardTitle className="font-semibold text-2xl tracking-wide flex justify-between">
             <p>Thursday</p>
@@ -46,8 +50,8 @@ const Weather = () => {
         <WeatherIcon icon={weather.icon} size={48} />
       </CardHeader>
       <Separator />
-      <CardContent className="text-center text-4xl font-bold tracking-wide py-3">
-        <div>{loading ? <Loader2 className="animate-spin m-auto" size={50} /> : <p>{temp}</p>}</div>
+      <CardContent className="text-4xl font-bold tracking-wide py-3 h-20 flex items-center justify-center">
+        <div>{loading ? <Loader2 className="animate-spin m-auto" size={50} /> : <p className="flex gap-5 items-center">{temp} <span className="text-xs text-neutral-400"> pr: {pres} hu: {hum}</span></p>}</div>
       </CardContent>
       <Separator />
       <CardFooter className="py-3 align-center">
