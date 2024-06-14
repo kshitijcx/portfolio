@@ -3,7 +3,7 @@ import BlogCard from "./_components/BlogCard";
 import { client } from "@/lib/sanity/client";
 
 const fetchPosts = async () => {
-  const CONTENT_QUERY = `*[_type == "post"] | order(_createdAt asc)`;
+  const CONTENT_QUERY = `*[_type == "post"]{title,slug,publishedAt,_id,mainImage{asset->{path,url}},categories[]->{title}} | order(_createdAt desc)`;
   const content = await client.fetch(CONTENT_QUERY);
   return content;
 };
@@ -11,6 +11,7 @@ const fetchPosts = async () => {
 const Blog = async () => {
   const data= await fetchPosts();
   console.log(data);
+  console.log(data[1].categories)
 
   return (
     <ScrollArea className="max-w-3xl mx-auto h-[500px] rounded-md border p-4">

@@ -18,7 +18,6 @@ const fetchTop3 = async () => {
 
 const LatestBlogs = async () => {
   const data = await fetchTop3();
-  console.log(data);
 
   return (
     <Card className="h-full">
