@@ -11,13 +11,12 @@ import LatestBlogsSingleItems from "./LatestBlogsSingleItems";
 import { client } from "@/lib/sanity/client";
 
 const fetchTop3 = async () => {
-  const CONTENT_QUERY = `*[_type == "post"] {}`;
+  const CONTENT_QUERY = `*[_type == "post"][0..2]{publishedAt,title,slug,_id}`;
   const content = await client.fetch(CONTENT_QUERY);
   return content;
 };
 
 const LatestBlogs = async () => {
-
   const data = await fetchTop3();
   console.log(data);
 
@@ -29,9 +28,9 @@ const LatestBlogs = async () => {
       </CardHeader>
       <Separator />
       <CardContent className="px-12 py-4 flex flex-col gap-2">
-        <LatestBlogsSingleItems />
-        <LatestBlogsSingleItems />
-        <LatestBlogsSingleItems />
+        {data.map((item) => (
+          <LatestBlogsSingleItems key="item._id" item={item} />
+        ))}
       </CardContent>
       <CardFooter>
         <p>Read More...</p>

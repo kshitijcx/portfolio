@@ -23,7 +23,7 @@ const Weather = async () => {
   const weather = dt.weather[0];
   const hum = dt.main.humidity;
   const pres = dt.main.pressure;
-  const temp = dt.main.temp;
+  const temp = Math.round(dt.main.temp);
   const loading = false;
 
   return (
@@ -43,9 +43,8 @@ const Weather = async () => {
       <CardContent className="text-4xl font-bold tracking-wide py-3 h-20 flex items-center justify-center">
         <div>
           <p className="flex gap-5 items-center">
-            {temp}{" "}
+            {temp}&deg;
             <span className="text-xs text-neutral-400">
-              {" "}
               pr: {pres} hu: {hum}
             </span>
           </p>

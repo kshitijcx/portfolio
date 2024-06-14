@@ -1,21 +1,22 @@
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { format } from "date-fns";
 
-const LatestBlogsSingleItems = () => {
+const LatestBlogsSingleItems = ({item}) => {
+  const day = format(item.publishedAt,'eeee');
+  const date = format(item.publishedAt,'dd.MM.yyyy');
   return ( 
       <Card className="h-20">
-        <CardHeader>
-          <CardTitle>
-            How to use Server Components in NextJs
+        <CardHeader className="py-3">
+          <CardTitle className="text-lg">
+            {item.title}
           </CardTitle>
           <CardDescription className="text-xs">
-            Wednesday 12/01/2024
+            {day} {date}
           </CardDescription>
         </CardHeader>
       </Card>
