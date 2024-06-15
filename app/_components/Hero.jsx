@@ -16,23 +16,23 @@ import { Separator } from "@/components/ui/separator";
 
 const Hero = () => {
   return (
-    <Card>
+    <Card className="md:h-full">
       <CardHeader className="py-5">
-        <CardTitle className="text-3xl font-semibold tracking-wide leading-normal">
+        <CardTitle className="text-3xl max-md:text-base font-semibold tracking-wide leading-normal">
           Kshitij Chauhan
         </CardTitle>
-        <CardDescription>Creative, passionate and goal oriented Full-Stack Software Engineer.</CardDescription>
+        <CardDescription className="max-md:text-xs">Creative, passionate and goal oriented Full-Stack Software Engineer.</CardDescription>
       </CardHeader>
       <Separator/>
-      <CardContent className="flex gap-2 mt-6 justify-end">
-        <Button variant="outline">
-          <GitHubLogoIcon className="w-5 h-5" />
+      <CardContent className="flex gap-2 mt-6 justify-end max-md:justify-center max-md:px-2">
+        <Button variant="secondary" className="max-md:h-8 max-md:w-12">
+          <GitHubLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
         </Button>
-        <Button variant="outline">
-          <LinkedInLogoIcon className="w-5 h-5" />
+        <Button variant="secondary" className="max-md:h-8 max-md:w-12" >
+          <LinkedInLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
         </Button>
-        <Button variant="outline">
-          <InstagramLogoIcon className="w-5 h-5" />
+        <Button variant="secondary" className="max-md:h-8 max-md:w-12" >
+          <InstagramLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
         </Button>
       </CardContent>
     </Card>

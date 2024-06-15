@@ -20,7 +20,7 @@ const LatestBlogs = async () => {
   const data = await fetchTop3();
 
   return (
-    <Card className="h-full">
+    <Card className="md:h-full">
       <CardHeader>
         <CardTitle className="text-3xl tracking-wide">Latest Posts</CardTitle>
         <CardDescription>Card Description</CardDescription>

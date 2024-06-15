@@ -20,6 +20,7 @@ const fetchWeather = async () => {
 
 const Weather = async () => {
   const dt = await fetchWeather();
+  console.log(dt);
   const weather = dt.weather[0];
   const hum = dt.main.humidity;
   const pres = dt.main.pressure;
@@ -27,7 +28,7 @@ const Weather = async () => {
   const loading = false;
 
   return (
-    <Card className="h-full">
+    <Card className="md:h-full">
       <CardHeader className="flex flex-row justify-between items-center py-2 h-24">
         <div>
           <CardTitle className="font-semibold text-2xl tracking-wide flex justify-between">

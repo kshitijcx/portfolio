@@ -4,7 +4,7 @@ import LatestBlogs from "./_components/LatestBlogs";
 
 const Home = () => {
   return (
-      <div className="grid grid-cols-3 grid-rows-2 gap-6">
+      <div className="grid grid-cols-3 grid-rows-2 gap-6 animate-pop max-md:flex flex-col">
         <div>
           <Hero />
         </div>
@@ -12,7 +12,7 @@ const Home = () => {
           <Weather />
         </div>
         <div className="col-span-2 row-span-2 col-start-2 row-start-1">
-          <LatestBlogs />
+          <LatestBlogs/>
         </div>
       </div>
   );

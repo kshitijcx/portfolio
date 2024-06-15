@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div>About</div>
+    <div className="animate-pop">About</div>
   )
 }
 export default About
