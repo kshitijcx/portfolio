@@ -1,5 +1,4 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
-import BlogCard from "./_components/BlogCard";
 import { client } from "@/lib/sanity/client";
 import FilterCompo from "./_components/FilterCompo";
 
@@ -11,8 +10,6 @@ const fetchPosts = async () => {
 
 const Blog = async () => {
   const data= await fetchPosts();
-  console.log(data);
-  console.log(data[1].categories)
 
   return (
     <ScrollArea className="max-w-3xl mx-auto md:h-[500px] max-h-[700px] rounded-md border p-4 animate-pop">

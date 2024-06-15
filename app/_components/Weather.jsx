@@ -20,7 +20,6 @@ const fetchWeather = async () => {
 
 const Weather = async () => {
   const dt = await fetchWeather();
-  console.log(dt);
   const weather = dt.weather[0];
   const hum = dt.main.humidity;
   const pres = dt.main.pressure;
