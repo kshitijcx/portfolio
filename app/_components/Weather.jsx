@@ -9,10 +9,11 @@ import {
 import { Loader2 } from "lucide-react";
 import WeatherIcon from "./WeatherIcon";
 import { Separator } from "@/components/ui/separator";
+import { format } from "date-fns";
 
 const fetchWeather = async () => {
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${process.env.NEXT_PUBLIC_LOC}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${process.env.NEXT_PUBLIC_LOC}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER}`,
   );
   const data = await response.json();
   return data;
@@ -31,7 +32,7 @@ const Weather = async () => {
       <CardHeader className="flex flex-row justify-between items-center py-2 h-24">
         <div>
           <CardTitle className="font-semibold text-2xl tracking-wide flex justify-between">
-            <p>Thursday</p>
+            <p>{format(Date.now(),'eeee')}</p>
           </CardTitle>
           <CardDescription className="tracking-wide">
             {!loading && weather.description}
@@ -52,7 +53,7 @@ const Weather = async () => {
       </CardContent>
       <Separator />
       <CardFooter className="py-3 align-center">
-        <p className="underline decoration-dashed underline-offset-4 text-lg font-semibold">
+        <p className="underline-offset-2">
           Dharamshala
         </p>
       </CardFooter>
