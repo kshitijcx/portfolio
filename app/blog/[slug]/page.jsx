@@ -90,8 +90,6 @@ const components = {
 const page = async ({ params }) => {
   const data = await fetchPosts(params.slug);
   const postBody = data[0].body;
-  console.log(data);
-  console.log(postBody);
 
   return (
     <ScrollArea className="max-w-4xl h-[550px] rounded-md border p-4 mx-auto animate-pop">
