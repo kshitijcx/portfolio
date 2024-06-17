@@ -11,7 +11,7 @@ const fetchPosts = async () => {
 const Blog = async () => {
   const data= await fetchPosts();
   return (
-    <ScrollArea className="max-w-3xl mx-auto md:h-[500px] max-h-[700px] rounded-md border p-4 animate-pop">
+    <ScrollArea className="max-w-3xl mx-auto h-[500px] max-md:max-w-sm max-md:h-[675px] rounded-md border p-4 animate-pop">
       <FilterCompo data={data} />
     </ScrollArea>
   );

@@ -24,17 +24,17 @@ const LatestBlogs = async () => {
 
   return (
     <Card className="md:h-full">
-      <CardHeader>
-        <CardTitle className="text-3xl tracking-wide">Latest Posts</CardTitle>
-        <CardDescription>Welcome, feel free to read anything you like...</CardDescription>
+      <CardHeader className="max-md:h-20 py-2">
+        <CardTitle className="text-3xl max-md:text-base tracking-wide">Latest Posts</CardTitle>
+        <CardDescription className="tracking-wide max-md:text-xs">Welcome, feel free to read anything you like...</CardDescription>
       </CardHeader>
       <Separator />
-      <CardContent className="px-12 py-6 flex flex-col gap-2">
+      <CardContent className="px-12 max-md:px-6 py-6 max-md:py-4 flex flex-col gap-2">
         {data.map((item) => (
           <LatestBlogsSingleItems key="item._id" item={item} />
         ))}
       </CardContent>
-      <Separator className="mb-6"/>
+      <Separator className="mb-6 max-md:mb-4"/>
       <CardFooter className="">
         <p className="text-sm max-md:text-xs hover:underline"><Link href='/blog'>Read More...</Link></p>
       </CardFooter>

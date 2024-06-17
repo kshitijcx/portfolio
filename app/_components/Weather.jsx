@@ -25,23 +25,22 @@ const Weather = async () => {
   const hum = dt.main.humidity;
   const pres = dt.main.pressure;
   const temp = Math.round(dt.main.temp);
-  const loading = false;
 
   return (
     <Card className="md:h-full">
-      <CardHeader className="flex flex-row justify-between items-center py-2 h-24">
+      <CardHeader className="flex flex-row justify-between items-center py-2 md:h-24">
         <div>
-          <CardTitle className="font-semibold text-2xl tracking-wide flex justify-between">
+          <CardTitle className="font-semibold text-2xl trackin-wide max-md:text-base">
             <p>{format(Date.now(),'eeee')}</p>
           </CardTitle>
-          <CardDescription className="tracking-wide">
-            {!loading && weather.description}
+          <CardDescription className="tracking-wide max-md:text-xs">
+            {weather.description}
           </CardDescription>
         </div>
         <WeatherIcon icon={weather.icon} size={48} />
       </CardHeader>
       <Separator />
-      <CardContent className="text-4xl font-bold tracking-wide py-3 h-20 flex items-center justify-center">
+      <CardContent className="text-4xl max-md:text-2xl font-bold tracking-wide py-3 md:h-20 flex items-center justify-center">
         <div>
           <p className="flex gap-5 items-center">
             {temp}&deg;
@@ -53,8 +52,8 @@ const Weather = async () => {
       </CardContent>
       <Separator />
       <CardFooter className="py-3 align-center">
-        <p className="underline-offset-2">
-          Dharamshala
+        <p className="font-normal text-base">
+          Dharamshala 
         </p>
       </CardFooter>
     </Card>

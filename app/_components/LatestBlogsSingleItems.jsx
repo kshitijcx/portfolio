@@ -11,9 +11,9 @@ const LatestBlogsSingleItems = ({item}) => {
   const day = format(item.publishedAt,'eeee');
   const date = format(item.publishedAt,'dd.MM.yyyy');
   return ( 
-      <Card className="h-20">
-        <CardHeader className="py-3">
-          <CardTitle className="text-lg hover:underline">
+      <Card className="h-20 max-md:h-16">
+        <CardHeader className="py-3 max-md:py-2">
+          <CardTitle className="text-lg max-md:text-base hover:underline">
             <Link href={`/blog/${item.slug.current}`}>{item.title}</Link>
           </CardTitle>
           <CardDescription className="text-xs">

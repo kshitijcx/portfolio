@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <nav className="max-w-7xl mx-auto p-8 max-md:px-11 flex justify-between items-center">
+    <nav className="max-w-7xl mx-auto p-8 max-md:px-8 flex justify-between items-center">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost">
