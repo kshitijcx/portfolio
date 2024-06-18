@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark">
       <body className={`${inter.className}`}>
         <Nav />
-        <main className="max-w-6xl mx-auto px-20 max-md:px-10 py-4">
+        <main className="max-w-6xl mx-auto px-20 max-md:px-10 py-2">
           {children}
         </main>
       </body>

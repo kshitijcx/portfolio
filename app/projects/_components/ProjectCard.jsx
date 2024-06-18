@@ -13,10 +13,10 @@ import Link from "next/link"
 
 const ProjectCard = ({item}) => {
   return (
-    <Card className="flex flex-col justify-between">
+    <Card className="flex flex-col justify-between tracking-wide">
       <CardHeader className="py-3">
-        <CardTitle className="font-bold text-xl">{item.name}</CardTitle>
-        <CardDescription className="text-xs tracking-wide">{item.techstack}</CardDescription>
+        <CardTitle className="font-bold text-xl max-md:text-lg">{item.name}</CardTitle>
+        <CardDescription className="text-xs">{item.techstack}</CardDescription>
       </CardHeader>
       <CardContent>
         <p className="text-sm">{item.content}</p>

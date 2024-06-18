@@ -2,6 +2,15 @@ import ProjectCard from "./_components/ProjectCard";
 
 const projectArr = [
   {
+    name: "Student Attendance System",
+    techstack:
+      "NextJs, React, Clerk, shadcn, Tailwind, Javascript, Neon Postgres, Drizzle ORM",
+    content:
+      "Attendance platform that users to create list of students and mark their attendance, view previous attendance.",
+    link: "Live Soon...",
+    glink: "https://github.com/kshi7ijcx/blogpress",
+  },
+  {
     name: "BlogPress",
     techstack: "NextJs, React, Tailwind, Javascript, Appwrite",
     content:
@@ -16,15 +25,6 @@ const projectArr = [
       "App similar to ChatGPT where users can interact with AI to get answers.",
     link: "Live Soon...",
     glink: "https://github.com/kshi7ijcx/ai-chat",
-  },
-  {
-    name: "Student Attendance System",
-    techstack:
-      "NextJs, React, shadcn, Tailwind, Javascript, Neon Postgres, Drizzle ORM",
-    content:
-      "Attendance platform that users to create list of students and mark their attendance, view previous attendance.",
-    link: "Live Soon...",
-    glink: "https://github.com/kshi7ijcx/blogpress",
   },
   {
     name: "Ticketing App",

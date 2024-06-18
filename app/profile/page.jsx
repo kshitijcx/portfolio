@@ -46,27 +46,27 @@ const eduArr = [
 
 const About = () => {
   return (
-    <div className="grid grid-cols-2 gap-2 animate-pop tracking-normal">
+    <div className="grid grid-cols-2 gap-2 animate-pop max-md:flex flex-col">
       <div className="col-span-2 flex items-center justify-center gap-7">
         <Image 
           src="/pic.jpg"
-          className="rounded-full"
+          className="rounded-full max-md:h-24 max-md:w-24"
           height={150}
           width={150}
           alt="Kshitij Chauhan"
         />
         <div>
-          <h1 className="font-bold text-3xl tracking-wide">Kshitij Chauhan</h1>
-          <p className="italic">B.E. Computer Science @ Chandigarh University</p>
+          <h1 className="font-bold text-3xl tracking-wide max-md:text-xl">Kshitij Chauhan</h1>
+          <p className="italic max-md:text-sm">B.E. Computer Science @ Chandigarh University</p>
         </div>
       </div>
-      <div className="col-span-2 flex justify-center p-4 gap-4">
+      <div className="col-span-2 flex justify-center py-4 gap-4 max-md:flex-col">
         <Card>
           <CardHeader className="py-3">
             <CardTitle className="text-lg">Skills</CardTitle>
           </CardHeader>
           <CardContent className="text-sm">
-            <ul className="px-4 columns-2 leading-loose">
+            <ul className="px-4 columns-2 leading-loose text-center">
               {skillsArr.map((item, idx) => (
                 <li key={idx} className="list-disc">
                   {item}
@@ -84,8 +84,8 @@ const About = () => {
               {eduArr.map((item, idx) => (
                 <li className="list-disc" key={idx}>
                   <div className="flex gap-5 justify-between items-center">
-                    <p className="font-semibold">{item.qual}</p>
-                    <p className="text-xs">{item.year}</p>
+                    <p className="md:font-semibold">{item.qual}</p>
+                    <p className="text-xs max-md:hidden">{item.year}</p>
                   </div>
                   <p className="italic">{item.name}</p>
                   <p>{`score: ${item.score}`}</p>

@@ -12,9 +12,11 @@ import Link from "next/link";
 
 const fetchTop3 = async () => {
   const CONTENT_QUERY = `*[_type == "post"]{publishedAt,title,slug,mainImage{asset->{path,url}}}|order(publishedAt desc)[0..2]`;
-  const content = await client.fetch(CONTENT_QUERY, { cache: "no-store" });
+  const content = await client.fetch(CONTENT_QUERY);
   return content;
 };
+
+export const revalidate = 1000;
 
 const LatestBlogs = async () => {
   const data = await fetchTop3();

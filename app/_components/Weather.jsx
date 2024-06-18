@@ -49,7 +49,7 @@ const Weather = async () => {
         </div>
       </CardContent>
       <CardFooter>
-        <p className="tracking-normal text-sm">
+        <p className="tracking-normal text-sm max-md:text-xs">
           Dharamshala, Himachal Pradesh
         </p>
       </CardFooter>

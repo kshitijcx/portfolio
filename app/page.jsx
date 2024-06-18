@@ -4,7 +4,7 @@ import LatestBlogs from "./_components/LatestBlogs";
 
 const Home = () => {
   return (
-      <div className="grid grid-cols-3 grid-rows-2 gap-6 animate-pop max-md:flex flex-col">
+      <div className="grid grid-cols-3 grid-rows-2 gap-6 animate-pop max-md:flex flex-col max-md:px-6 max-md:mb-4">
         <div>
           <Hero />
         </div>
