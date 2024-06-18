@@ -1,20 +1,19 @@
+"use client";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { Menu, Moon } from "lucide-react";
-import { Switch } from "@/components/ui/switch";
+import { Menu, SunMoon } from "lucide-react";
 import Link from "next/link";
-import { SunIcon } from "@radix-ui/react-icons";
+import { useTheme } from "next-themes";
 
 const Nav = () => {
+  const { setTheme } = useTheme();
   return (
-    <nav className="max-w-7xl mx-auto p-8 max-md:px-8 flex justify-between items-center">
+    <nav className="max-w-7xl mx-auto p-8 max-md:py-5 flex justify-between items-center">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost">
@@ -22,8 +21,6 @@ const Nav = () => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuLabel>Menu</DropdownMenuLabel>
-          <DropdownMenuSeparator />
           <Link href={"/"}>
             <DropdownMenuItem>Home</DropdownMenuItem>
           </Link>
@@ -39,9 +36,24 @@ const Nav = () => {
         </DropdownMenuContent>
       </DropdownMenu>
       <div className="flex gap-3 items-center">
-        <SunIcon className="w-5 h-5" />
-        <Switch />
-        <Moon size={20} />
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost">
+              <SunMoon />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem onClick={() => setTheme("dark")}>
+              Dark
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("light")}>
+              Light
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("system")}>
+              System
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </nav>
   );

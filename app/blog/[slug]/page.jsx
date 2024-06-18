@@ -10,8 +10,6 @@ const fetchPosts = async (val) => {
   return content;
 };
 
-export const revalidate = 0;
-
 const builder = imageUrlBuilder(client);
 
 const components = {

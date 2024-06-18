@@ -1,8 +1,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -46,8 +44,8 @@ const eduArr = [
 
 const About = () => {
   return (
-    <div className="grid grid-cols-2 gap-2 animate-pop max-md:flex flex-col">
-      <div className="col-span-2 flex items-center justify-center gap-7">
+    <div className="grid grid-cols-2 gap-2 tracking-wide animate-pop max-md:flex flex-col">
+      <div className="col-span-2 flex items-center justify-center gap-6">
         <Image 
           src="/pic.jpg"
           className="rounded-full max-md:h-24 max-md:w-24"
@@ -56,7 +54,7 @@ const About = () => {
           alt="Kshitij Chauhan"
         />
         <div>
-          <h1 className="font-bold text-3xl tracking-wide max-md:text-xl">Kshitij Chauhan</h1>
+          <h1 className="font-bold text-3xl max-md:text-xl">Kshitij Chauhan</h1>
           <p className="italic max-md:text-sm">B.E. Computer Science @ Chandigarh University</p>
         </div>
       </div>
@@ -66,7 +64,7 @@ const About = () => {
             <CardTitle className="text-lg">Skills</CardTitle>
           </CardHeader>
           <CardContent className="text-sm">
-            <ul className="px-4 columns-2 leading-loose text-center">
+            <ul className="px-4 columns-2 leading-loose">
               {skillsArr.map((item, idx) => (
                 <li key={idx} className="list-disc">
                   {item}

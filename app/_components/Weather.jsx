@@ -11,12 +11,13 @@ import { format } from "date-fns";
 
 const fetchWeather = async () => {
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${process.env.NEXT_PUBLIC_LOC}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER}`,
-    { cache: "no-store" }
+    `https://api.openweathermap.org/data/2.5/weather?q=${process.env.NEXT_PUBLIC_LOC}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER}`
   );
   const data = await response.json();
   return data;
 };
+
+export const revalidate = 1000;
 
 const Weather = async () => {
   const dt = await fetchWeather();
