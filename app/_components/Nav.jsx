@@ -7,9 +7,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { Menu, Moon, Sun, SunIcon } from "lucide-react";
+import { Menu, Moon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
+import { SunIcon } from "@radix-ui/react-icons";
 
 const Nav = () => {
   return (
@@ -23,7 +24,6 @@ const Nav = () => {
         <DropdownMenuContent>
           <DropdownMenuLabel>Menu</DropdownMenuLabel>
           <DropdownMenuSeparator />
-
           <Link href={"/"}>
             <DropdownMenuItem>Home</DropdownMenuItem>
           </Link>
@@ -33,16 +33,15 @@ const Nav = () => {
           <Link href={"/projects"}>
             <DropdownMenuItem>Projects</DropdownMenuItem>
           </Link>
-          <Link href={"/about-me"}>
-            <DropdownMenuItem>About Me</DropdownMenuItem>
+          <Link href={"/profile"}>
+            <DropdownMenuItem>Profile</DropdownMenuItem>
           </Link>
-          
         </DropdownMenuContent>
       </DropdownMenu>
       <div className="flex gap-3 items-center">
-        <Sun />
+        <SunIcon className="w-5 h-5" />
         <Switch />
-        <Moon size={22} />
+        <Moon size={20} />
       </div>
     </nav>
   );

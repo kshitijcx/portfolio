@@ -1,4 +1,3 @@
-'use client'
 import Image from "next/image";
 import {
   Card,
@@ -8,13 +7,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { format } from "date-fns";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
 const BlogCard = ({ item,filterFxn }) => {
   return (
-    <Card className="flex items-center px-6 max-md:px-1 py-1 h-24"> 
-      <div className="w-32 max-md:hidden">
+    <Card className="flex items-center px-4 max-md:px-1 py-1 h-24"> 
+      <div className="w-28 max-md:hidden">
         <Image
           src={item.mainImage.asset.url}
           width={100}
@@ -32,7 +30,7 @@ const BlogCard = ({ item,filterFxn }) => {
           </CardDescription>
         </CardHeader>
         <CardFooter className="px-4 py-2 text-xs space-x-2">
-          {item.categories && item.categories.map((cat,index)=>(<p className="text-xs text-neutral-300 underline underline-offset-2 max-md:text-[10px]" key={index} onClick={()=>filterFxn(cat.title)}>{cat.title}</p>))}
+          {item.categories && item.categories.map((cat,index)=>(<p className="text-xs text-neutral-300 max-md:text-[10px] hover:cursor-pointer hover:text-neutral-200" key={index} onClick={()=>filterFxn(cat.title)}>{cat.title}</p>))}
         </CardFooter>
       </div>
     </Card>

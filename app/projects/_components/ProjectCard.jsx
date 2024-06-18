@@ -14,7 +14,7 @@ import Link from "next/link"
 const ProjectCard = ({item}) => {
   return (
     <Card className="flex flex-col justify-between">
-      <CardHeader>
+      <CardHeader className="py-3">
         <CardTitle className="font-bold text-xl">{item.name}</CardTitle>
         <CardDescription className="text-xs tracking-wide">{item.techstack}</CardDescription>
       </CardHeader>
