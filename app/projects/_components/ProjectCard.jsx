@@ -8,21 +8,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Link } from "lucide-react"
+import { LinkIcon } from "lucide-react"
+import Link from "next/link"
 
-const ProjectCard = () => {
+const ProjectCard = ({item}) => {
   return (
-    <Card>
+    <Card className="flex flex-col justify-between">
       <CardHeader>
-        <CardTitle className="font-bold text-xl">Project 1</CardTitle>
-        <CardDescription className="text-xs tracking-wide">NextJs, React, HTML, CSS, Javascript</CardDescription>
+        <CardTitle className="font-bold text-xl">{item.name}</CardTitle>
+        <CardDescription className="text-xs tracking-wide">{item.techstack}</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-sm">This project showcases the future of humanity in form of self driving cars. Hello hello 123</p>
+        <p className="text-sm">{item.content}</p>
       </CardContent>
       <CardFooter className="flex justify-end gap-4">
-        <Button><GitHubLogoIcon className="w-4 h-4" /></Button>
-        <Button><Link className="w-4 h-4"/></Button>
+        <Button variant="secondary"><Link href={item.glink}><GitHubLogoIcon className="w-4 h-4"/></Link></Button>
+        <Button variant="secondary"><Link href={item.link}><LinkIcon className="w-4 h-4"/></Link></Button>
       </CardFooter>
     </Card>
   );

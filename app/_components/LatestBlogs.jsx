@@ -24,7 +24,7 @@ const LatestBlogs = async () => {
 
   return (
     <Card className="md:h-full">
-      <CardHeader className="max-md:h-20 py-2">
+      <CardHeader className="max-md:h-20 max-md:py-2">
         <CardTitle className="text-3xl max-md:text-base tracking-wide">Latest Posts</CardTitle>
         <CardDescription className="tracking-wide max-md:text-xs">Welcome, feel free to read anything you like...</CardDescription>
       </CardHeader>
