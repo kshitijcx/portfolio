@@ -30,17 +30,17 @@ const Hero = () => {
       </CardHeader>
       <CardContent className="flex gap-2 justify-end max-md:justify-start max-md:px-6">
         <Button variant="secondary" className="max-md:h-8 max-md:w-12">
-          <Link href="">
+          <Link href="https://github.com/kshi7ijcx">
             <GitHubLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
           </Link>
         </Button>
         <Button variant="secondary" className="max-md:h-8 max-md:w-12">
-          <Link>
+          <Link href="https://www.linkedin.com/in/kshitij-chauhan-161444223/">
             <LinkedInLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
           </Link>
         </Button>
         <Button variant="secondary" className="max-md:h-8 max-md:w-12">
-          <Link>
+          <Link href="https://www.instagram.com/kshitijcx/">
             <InstagramLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
           </Link>
         </Button>
