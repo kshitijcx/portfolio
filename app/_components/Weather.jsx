@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import WeatherIcon from "./WeatherIcon";
 import { format } from "date-fns";
+import { revalidatePath } from "next/cache";
 
 const fetchWeather = async () => {
   const response = await fetch(
@@ -17,9 +18,8 @@ const fetchWeather = async () => {
   return data;
 };
 
-export const revalidate = 1000;
-
 const Weather = async () => {
+  revalidatePath("/");
   const dt = await fetchWeather();
   const weather = dt.weather[0];
   const hum = dt.main.humidity;

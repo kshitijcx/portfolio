@@ -10,7 +10,7 @@ import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button"
 import Link from "next/link";
 
 const Hero = () => {
@@ -29,21 +29,24 @@ const Hero = () => {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex gap-2 justify-end max-md:justify-start max-md:px-6">
-        <Button variant="secondary" className="max-md:h-8 max-md:w-12">
-          <Link href="https://github.com/kshi7ijcx">
-            <GitHubLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
-          </Link>
-        </Button>
-        <Button variant="secondary" className="max-md:h-8 max-md:w-12">
-          <Link href="https://www.linkedin.com/in/kshitij-chauhan-161444223/">
-            <LinkedInLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
-          </Link>
-        </Button>
-        <Button variant="secondary" className="max-md:h-8 max-md:w-12">
-          <Link href="https://www.instagram.com/kshitijcx/">
-            <InstagramLogoIcon className="max-md:w-20 max-md:h-20 h-5 w-5" />
-          </Link>
-        </Button>
+        <Link
+          className={`${buttonVariants({ variant: "secondary" })} max-md:h-8 max-md:w-8 max-md:p-1`}
+          href="https://github.com/kshi7ijcx"
+        >
+          <GitHubLogoIcon className="max-md:w-4 max-md:h-4 h-5 w-5" />
+        </Link>
+        <Link
+          className={`${buttonVariants({ variant: "secondary" })} max-md:h-8 max-md:w-8 max-md:p-1`}
+          href="https://www.linkedin.com/in/kshitij-chauhan-161444223/"
+        >
+          <LinkedInLogoIcon className="max-md:w-4 max-md:h-4 h-5 w-5" />
+        </Link>
+        <Link
+          className={`${buttonVariants({ variant: "secondary" })} max-md:h-8 max-md:w-8 max-md:p-1`}
+          href="https://www.instagram.com/kshitijcx/"
+        >
+          <InstagramLogoIcon className="max-md:w-4 max-md:h-4 h-5 w-5" />
+        </Link>
       </CardContent>
     </Card>
   );

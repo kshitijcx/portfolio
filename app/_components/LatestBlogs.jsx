@@ -9,6 +9,7 @@ import {
 import LatestBlogsSingleItems from "./LatestBlogsSingleItems";
 import { client } from "@/lib/sanity/client";
 import Link from "next/link";
+import { revalidatePath } from "next/cache";
 
 const fetchTop3 = async () => {
   const CONTENT_QUERY = `*[_type == "post"]{publishedAt,title,slug,mainImage{asset->{path,url}}}|order(publishedAt desc)[0..2]`;
@@ -16,9 +17,8 @@ const fetchTop3 = async () => {
   return content;
 };
 
-export const revalidate = 1000;
-
 const LatestBlogs = async () => {
+  revalidatePath("/");
   const data = await fetchTop3();
 
   return (

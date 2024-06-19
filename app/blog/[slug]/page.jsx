@@ -71,7 +71,7 @@ const page = async ({ params }) => {
   const postBody = data[0].body;
 
   return (
-    <ScrollArea className="max-w-4xl h-[550px] max-md:h-[700px] rounded-md border py-4 max-md:py-2 mx-auto animate-pop max-md:text-sm max-md:px-2">
+    <ScrollArea className="max-w-4xl h-[550px] max-md:h-[675px] rounded-md border py-4 max-md:py-2 mx-auto animate-pop max-md:text-sm max-md:px-2">
       <div className="md:w-[500px] mx-auto">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-2xl font-bold my-1">{data[0].title}</h1>
