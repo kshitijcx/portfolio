@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Nav />
-          <main className="max-w-6xl mx-auto px-20 max-md:px-10 py-2">
+          <main className="max-w-6xl h-[520px] mx-auto px-20 max-md:px-5 py-2 flex items-center justify-center">
             {children}
           </main>
         </ThemeProvider>

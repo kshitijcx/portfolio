@@ -12,7 +12,7 @@ const LatestBlogsSingleItems = ({ item }) => {
   const day = format(item.publishedAt, "eeee");
   const date = format(item.publishedAt, "dd.MM.yyyy");
   return (
-    <Card className="flex items-center px-4 max-md:px-1 h-24">
+    <Card className="flex items-center px-4 max-md:px-1 min-h-20">
       <div className="w-28 max-md:hidden">
         <Image
           src={item.mainImage.asset.url}
@@ -23,8 +23,8 @@ const LatestBlogsSingleItems = ({ item }) => {
         />
       </div>
       <div>
-        <CardHeader className="px-4 py-0 h-12">
-          <CardTitle className="text-lg max-md:text-sm">
+        <CardHeader className="px-4 max-md:px-3 py-0 min-h-12">
+          <CardTitle className="text-base max-md:text-sm max-md:font-medium">
             <Link
               href={`/blog/${item.slug.current}`}
               className="hover:underline"

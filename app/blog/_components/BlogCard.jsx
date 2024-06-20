@@ -22,14 +22,14 @@ const BlogCard = ({ item,filterFxn }) => {
         />
       </div>
       <div>
-        <CardHeader className="px-4 py-0 min-h-12">
-          <CardTitle className="text-lg max-md:text-base"><Link href={`/blog/${item.slug.current}`} className="hover:underline" target="_blank">{item.title}</Link></CardTitle>
+        <CardHeader className="px-4 py-1 min-h-12">
+          <CardTitle className="text-lg max-md:text-base max-md:font-medium"><Link href={`/blog/${item.slug.current}`} className="hover:underline" target="_blank">{item.title}</Link></CardTitle>
           <CardDescription className="text-xs max-md:text-[10px]">
             {format(item.publishedAt, "eeee")}{" "}
             {format(item.publishedAt, "dd.MM.yyyy")}
           </CardDescription>
         </CardHeader>
-        <CardFooter className="px-4 py-2 text-xs space-x-2">
+        <CardFooter className="px-4 pb-1 text-xs space-x-2">
           {item.categories && item.categories.map((cat,index)=>(<p className="text-xs text-neutral-300 max-md:text-[10px] hover:cursor-pointer hover:text-neutral-200" key={index} onClick={()=>filterFxn(cat.title)}>{cat.title}</p>))}
         </CardFooter>
       </div>

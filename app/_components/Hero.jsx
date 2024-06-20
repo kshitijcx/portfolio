@@ -16,7 +16,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <Card className="md:h-full flex flex-col justify-between">
-      <CardHeader>
+      <CardHeader className="max-md:py-3">
         <CardTitle className="text-2xl max-md:text-base font-semibold tracking-wide leading-normal">
           Kshitij Chauhan
         </CardTitle>
@@ -28,7 +28,7 @@ const Hero = () => {
           <br />
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex gap-2 justify-end max-md:justify-start max-md:px-6">
+      <CardContent className="flex gap-2 justify-end max-md:justify-start max-md:px-6 max-md:pb-3 max-md:pt-2">
         <Link
           className={`${buttonVariants({ variant: "secondary" })} max-md:h-8 max-md:w-8 max-md:p-1`}
           href="https://github.com/kshi7ijcx"

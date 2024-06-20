@@ -28,7 +28,7 @@ const Weather = async () => {
 
   return (
     <Card className="md:h-full tracking-wide flex flex-col justify-between">
-      <CardHeader className="flex flex-row justify-between items-center">
+      <CardHeader className="flex flex-row justify-between items-center max-md:py-2">
         <div>
           <CardTitle className="font-semibold text-xl max-md:text-base">
             <p>{format(Date.now(), "eeee")}</p>
@@ -39,7 +39,7 @@ const Weather = async () => {
         </div>
         <WeatherIcon icon={weather.icon} size={48} />
       </CardHeader>
-      <CardContent className="text-3xl max-md:text-2xl font-bold flex items-center justify-center">
+      <CardContent className="text-3xl max-md:text-2xl font-bold flex items-center justify-center max-md:pb-4">
         <div>
           <p className="flex gap-5 items-center">
             {temp}&deg;
@@ -49,7 +49,7 @@ const Weather = async () => {
           </p>
         </div>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="max-md:pb-3">
         <p className="tracking-normal text-sm max-md:text-xs">
           Dharamshala, Himachal Pradesh
         </p>

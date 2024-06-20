@@ -13,14 +13,14 @@ import { useTheme } from "next-themes";
 const Nav = () => {
   const { setTheme } = useTheme();
   return (
-    <nav className="max-w-7xl mx-auto p-8 max-md:py-5 flex justify-between items-center">
+    <nav className="max-w-7xl mx-auto md:p-8 max-md:py-4 max-md:px-3 flex justify-between items-center">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost">
             <Menu />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent className="absolute -left-3">
           <Link href={"/"}>
             <DropdownMenuItem>Home</DropdownMenuItem>
           </Link>
@@ -42,7 +42,7 @@ const Nav = () => {
               <SunMoon />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent className="absolute -right-3">
             <DropdownMenuItem onClick={() => setTheme("dark")}>
               Dark
             </DropdownMenuItem>
