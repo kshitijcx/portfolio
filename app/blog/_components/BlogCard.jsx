@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const BlogCard = ({ item,filterFxn }) => {
   return (
-    <Card className="flex items-center px-4 max-md:px-1 py-1 h-24"> 
+    <Card className="flex items-center px-4 max-md:px-1 py-1 min-h-24"> 
       <div className="w-28 max-md:hidden">
         <Image
           src={item.mainImage.asset.url}
@@ -22,7 +22,7 @@ const BlogCard = ({ item,filterFxn }) => {
         />
       </div>
       <div>
-        <CardHeader className="px-4 py-0 h-12">
+        <CardHeader className="px-4 py-0 min-h-12">
           <CardTitle className="text-lg max-md:text-base"><Link href={`/blog/${item.slug.current}`} className="hover:underline" target="_blank">{item.title}</Link></CardTitle>
           <CardDescription className="text-xs max-md:text-[10px]">
             {format(item.publishedAt, "eeee")}{" "}
