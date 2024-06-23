@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -22,8 +22,20 @@ const ProjectCard = ({item}) => {
         <p className="text-sm">{item.content}</p>
       </CardContent>
       <CardFooter className="flex justify-end gap-4">
-        <Button variant="secondary"><Link href={item.glink}><GitHubLogoIcon className="w-4 h-4"/></Link></Button>
-        <Button variant="secondary"><Link href={item.link}><LinkIcon className="w-4 h-4"/></Link></Button>
+
+      <Link
+          className={`${buttonVariants({ variant: "secondary" })} max-md:h-8 max-md:w-8 max-md:p-1`}
+          href={item.glink}
+        >
+          <GitHubLogoIcon className="max-md:w-4 max-md:h-4 h-5 w-5" />
+        </Link>
+
+        <Link
+          className={`${buttonVariants({ variant: "secondary" })} max-md:h-8 max-md:w-8 max-md:p-1`}
+          href={item.link}
+        >
+          <LinkIcon className="max-md:w-4 max-md:h-4 h-5 w-5" />
+        </Link>
       </CardFooter>
     </Card>
   );

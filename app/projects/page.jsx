@@ -8,7 +8,7 @@ const projectArr = [
     content:
       "Attendance platform that users to create list of students and mark their attendance, view previous attendance.",
     link: "Live Soon...",
-    glink: "https://github.com/kshi7ijcx/blogpress",
+    glink: "https://github.com/kshi7ijcx/student-attendance-system",
   },
   {
     name: "BlogPress",
@@ -16,7 +16,7 @@ const projectArr = [
     content:
       "Blogging site where users can create an account, create/edit their posts and read posts by other users.",
     link: "Live Soon...",
-    glink: "https://github.com/kshi7ijcx/student-attendance-system",
+    glink:"https://github.com/kshi7ijcx/blogpress",
   },
   {
     name: "AI Chat",
@@ -32,7 +32,7 @@ const projectArr = [
     content:
       "Ticketing app that allows users to create/edit tasks, set priority levels, progress and mark them as complete once the task is done.",
     link: "Live Soon...",
-    glink: "",
+    glink: "https://github.com/kshi7ijcx/ticketing-app",
   },
 ];
 
