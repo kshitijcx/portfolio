@@ -71,33 +71,31 @@ const page = async ({ params }) => {
   const postBody = data[0].body;
 
   return (
-    <ScrollArea className="max-w-4xl h-[550px] max-md:h-[675px] rounded-md border py-4 max-md:py-2 mx-auto animate-pop max-md:text-sm max-md:px-2">
-      <div className="md:w-[500px] mx-auto">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-2xl font-bold my-1 max-md:text-lg tracking-wide break-words text-center">
-            {data[0].title}
-          </h1>
-          <p className="text-sm max-md:text-xs text-neutral-400 my-1">
-            {format(data[0].publishedAt, "eeee")}{" "}
-            {format(data[0].publishedAt, "dd.MM.yyyy")}
-          </p>
-          <div>
-            <Image
-              src={`${data[0].mainImage.asset.url}`}
-              height={200}
-              width={400}
-              alt="Main Image"
-              className="rounded-xl my-4 max-md:my-2"
-            />
-          </div>
-        </div>
-        <div className="leading-relaxed text-wrap">
-          <PortableText
-            value={postBody}
-            components={components}
-            className="max-md:text-sm"
+    <ScrollArea className="h-full max-w-2xl px-4 max-md:h-[750px] rounded-md border py-4 max-md:py-2 mx-auto animate-pop max-md:text-sm max-md:px-3">
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="text-2xl font-bold my-1 max-md:text-lg tracking-wide text-center">
+          {data[0].title}
+        </h1>
+        <p className="text-sm max-md:text-xs text-neutral-400 my-1">
+          {format(data[0].publishedAt, "eeee")}{" "}
+          {format(data[0].publishedAt, "dd.MM.yyyy")}
+        </p>
+        <div>
+          <Image
+            src={`${data[0].mainImage.asset.url}`}
+            height={200}
+            width={400}
+            alt="Main Image"
+            className="rounded-xl my-4 max-md:my-2"
           />
         </div>
+      </div>
+      <div className="leading-relaxed text-justify">
+        <PortableText
+          value={postBody}
+          components={components}
+          className="max-md:text-sm"
+        />
       </div>
     </ScrollArea>
   );
