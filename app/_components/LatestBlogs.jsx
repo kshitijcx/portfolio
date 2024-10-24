@@ -22,8 +22,8 @@ const LatestBlogs = async () => {
   const data = await fetchTop3();
 
   return (
-    <Card className="md:h-full">
-      <CardHeader className="max-md:h-20 max-md:py-3">
+    <Card>
+      <CardHeader className="max-md:h-20 max-md:py-4">
         <CardTitle className="text-2xl font-semibold max-md:text-base tracking-wide">
           Latest Posts
         </CardTitle>
@@ -31,12 +31,12 @@ const LatestBlogs = async () => {
           Welcome, feel free to read anything you like...
         </CardDescription>
       </CardHeader>
-      <CardContent className="px-12 max-md:px-2 flex flex-col gap-2 max-md:py-2">
+      <CardContent className="px-12 max-md:px-2 flex flex-col gap-2 max-md:py-1">
         {data.map((item) => (
           <LatestBlogsSingleItems key="item._id" item={item} />
         ))}
       </CardContent>
-      <CardFooter className="max-md:py-2">
+      <CardFooter className="max-md:pt-2 max-md:pb-3">
         <p className="text-sm max-md:text-xs hover:underline">
           <Link href="/blog">Read More...</Link>
         </p>

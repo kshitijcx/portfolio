@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Kshitij Chauhan",
   description: "",
+  viewport: {
+    width: 1,
+  },
 };
 
 export default function RootLayout({ children }) {
