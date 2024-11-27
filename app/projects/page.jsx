@@ -2,38 +2,37 @@ import ProjectCard from "./_components/ProjectCard";
 
 const projectArr = [
   {
-    name: "Student Attendance System",
+    name: "FileBank",
     techstack:
-      "NextJs, React, Clerk, shadcn, Tailwind, Javascript, Neon Postgres, Drizzle ORM",
+      "NextJs, React, Appwrite, shadcn, Tailwind CSS",
     content:
-      "Attendance platform that users to create list of students and mark their attendance, view previous attendance.",
-    link: "Live Soon...",
-    glink: "https://github.com/kshi7ijcx/student-attendance-system",
+      "Developed a web application that allows users to easily upload, store and manage their files. Users can also share the uploaded files with other users.",
+    link: "https://file-bank.vercel.app",
+    glink: "https://github.com/kshitijcx/file-bank",
   },
   {
     name: "BlogPress",
-    techstack: "NextJs, React, Tailwind, Javascript, Appwrite",
+    techstack: "NextJs, React, Appwrite, Tailwind CSS",
     content:
-      "Blogging site where users can create an account, create/edit their posts and read posts by other users.",
-    link: "Live Soon...",
-    glink:"https://github.com/kshi7ijcx/blogpress",
+      "Developed a blogging site where users can create, edit posts and also view posts by other users.",
+    link: "https://blogpress-alpha.vercel.app/",
+    glink:"https://github.com/kshitijcx/blogpress",
+  },{
+    name: "RollCall",
+    techstack: "NextJs, React, Clerk, Neon Postgres, Drizzle ORM, shacn, Tailwind CSS",
+    content:
+      "Developed a web application that makes the entire process of recording student attendance easy.",
+    link: "https://rollcallx.vercel.app/",
+    glink: "https://github.com/kshitijcx/student-attendance-system",
   },
   {
     name: "AI Chat",
-    techstack: "NextJs, React, Tailwind, Typescript, OpenAI",
+    techstack: "NextJs, React, Gemini API, Tailwind CSS",
     content:
-      "App similar to ChatGPT where users can interact with AI to get answers.",
-    link: "Live Soon...",
+      "Developed an A.I. chat app that allows the user to ask question and receive answers.",
+    link: "https://geminiclonex.vercel.app/",
     glink: "https://github.com/kshi7ijcx/ai-chat",
-  },
-  {
-    name: "Ticketing App",
-    techstack: "NextJs, React, Tailwind, MongoDB",
-    content:
-      "Ticketing app that allows users to create/edit tasks, set priority levels, progress and mark them as complete once the task is done.",
-    link: "Live Soon...",
-    glink: "https://github.com/kshi7ijcx/ticketing-app",
-  },
+  }
 ];
 
 const Projects = () => {
